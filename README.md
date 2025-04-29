@@ -44,4 +44,4 @@ Este projeto está sendo desenvolvido no âmbito do programa **Trilhas Inova**, 
 
 ## Status do projeto :
 
-Em desenvolvimento....
+![Em Desenvolvimento](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange?style=for-the-badge&logo=progress&logoColor=white)
