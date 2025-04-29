@@ -13,12 +13,12 @@ Este projeto está sendo desenvolvido no âmbito do programa **Trilhas Inova**, 
 - Gráficos e indicadores interativos no Dashboard
 - Design responsivo para diferentes dispositivos
 
-## 🚀 Tecnologias a serem utilizadas
+## Tecnologias a serem utilizadas 🚀 :
 
 - HTML5
 - CSS3
 - JavaScript
-- Frameworks: falta adicionar 
+- Frameworks: 
 - Ferramentas de design : Figma
 
 
@@ -31,7 +31,7 @@ Este projeto está sendo desenvolvido no âmbito do programa **Trilhas Inova**, 
 
 </div>
 
-- ## Equipe
+- ## Equipe :
 
 | Integrante                                | Trilha                              |
 |-------------------------------------------|-------------------------------------|
