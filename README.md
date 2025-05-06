@@ -31,7 +31,7 @@ Este projeto está sendo desenvolvido no âmbito do programa **Trilhas Inova**, 
 
 </div>
 
-- ## Equipe :
+- ## Desenvolvedores :
 
 | Integrante                                | Trilha                              |
 |-------------------------------------------|-------------------------------------|
