@@ -39,7 +39,6 @@ Este projeto está sendo desenvolvido no âmbito do programa **Trilhas Inova**, 
 | Glenda Maria Nascimento Lavra             | UX Design                          |
 | Augusto Carlos Lobo dos Santos Filho      | UX Design                          |
 | Edlan Carvalho Silva                      | Front end                          |
-| Leandro Durans Nunes                      | Front end                          |
 | Raislan Italo de Sousa da Silva           | Front end                          |
 | Sabrina Moreno Rodrigues                  | Front end                          |
 
