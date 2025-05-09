@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+/*Obs: eu ainda to tentando posicionar com as mesmas medidas do layout do figma, se houver algum erro, fique a vontade para corrigir, ok? 
+No html eu tive que colocar algumas divs e classes pra facilitar na hora de estilizar, e tambem eu dividi o codigo CSS em 4 partes (ou seções), 
+pra ficar mais fácil de estilizar . Alem disso, coloquei comentarios pra dividir as secoes .  Ainda tem varios ajustes a fazer nas 4 partes da 
+landing page, e tbm alguns medias query pra deixar responsivo */
+
+
+
+
+/*************Essa é a parte do cabeçalho (1° parte) **************/
+
+a{
+    text-decoration: none;
+    color:black
+}
+
+#navbar{
+    display: flex;
+    justify-content: center;
+    background-color: #ffff;
+    height: 100px;
+}
+
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px ;
+}
+
+
+.nav-left {
+    display: flex;
+    justify-content: left;
+
+    
+}
+
+.nav-rigth {
+    display: flex;
+    gap: 20px;
+    margin: 0 10px
+}
+
+.nav-rigth a {
+    padding: 0 20px ;
+}
+
+
+/*************2° parte da página **************/
+
+.acessar__dados{
+    background-color:#1E67ED ;
+    padding: 10%;
+    text-align: center;
+    color: #ffff;
+
+}
+
+.texto{
+    color: #ffff;
+}
+
+.btn__dados{
+    margin-top: 15px;
+    width: 180px;
+    padding: 10px;
+    background-color: #EC9B29;
+}
+
+
+
+/*************3° parte da página **************/
+
+#sobre{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.descricao__sistema{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+
+
+.alinhar__texto{
+
+
+}
+
+.posicionar__img{
+
+    display: flex;
+    justify-content: right;
+    width: 300px;     
+    height: auto;
+    
+}
+
+
+/*************4° parte da página( rodapé ) **************/
+
+.rodape {
+    background-color: #1E67ED ; 
+    padding: 15px 20px;
+    text-align: center;
+  }
+  
+  .rodape h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .img__rodape {
+    width: 170px; 
+    height: auto;
+    margin: 10px;
+  }
+  
+  .rodape .img__rodape {
+    display: inline-block;
+  }
+  
