@@ -9,6 +9,12 @@
     --cor-fundo: #ffff;
     --cor-texto: #000;
 
+    /* Gráficos */
+    --cor-resultado-azul: #319CC6;
+    --cor-resultado-rosa: #D88383;
+    --cor-resultado-anil: #2F4D99;
+    --cor-resultado-ciano: #21B1AA;
+
     /* Fontes */
     --font-principal: 'Roboto', sans-serif;
 
@@ -90,8 +96,9 @@ a {
 }
 
 .filtros__sessoes {
+    flex-wrap: wrap;
     display: flex;
-    padding: var(--espaco-padding);
+    padding: 1rem;
     gap: var(--espaco-gaps);
     justify-content: space-between;
     margin: 2rem;
@@ -124,32 +131,76 @@ select:hover {
 
 /* Sessão com os Resultados */
 
+.filtros__resultados {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin: 2rem 3rem;
+}
 
+.filtros__sessoes__resultados {
+    color: var(--cor-fundo);
+    display: flex;
+    padding: 2rem 4rem;
+    gap: 1.3rem;
+}
+
+.cor-1 {
+    background-color: var(--cor-resultado-azul);
+}
+
+.cor-2 {
+    background-color: var(--cor-resultado-rosa);
+}
+
+.cor-3 {
+    background-color: var(--cor-resultado-anil);
+}
+
+.cor-4 {
+    background-color: var(--cor-resultado-ciano);
+}
+
+.filtros__sessoes__resultados img {
+    width: 6vw;
+}
+
+/* Gráficos */
+.section__graficos {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 3rem 7rem 3rem;
+}
+
+.section__graficos__cor {
+    background-color: #d3d3d3;
+    width: 45%;
+}
 
 /* Rodapé */
 
 .rodape {
-  background-color: #1E67ED;
-  padding: 15px 20px;
-  text-align: center;
+    background-color: #1E67ED;
+    padding: 15px 20px;
+    text-align: center;
 }
 
 .rodape h3 {
-  margin: 1rem 1rem 2.5rem 1rem;
-  font-size: 1.6vw;
-  color: #fff;
+    margin: 1rem 1rem 2.5rem 1rem;
+    font-size: 1.6vw;
+    color: #fff;
 }
 
 .rodape__logos {
-  display: flex;
-  justify-content: center;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .rodape__logos__trilhas,
 .rodape__logos__secti {
-  margin-bottom: 2rem;
-  width: 15%;
-  height: auto;
-  object-fit: contain;
+    margin-bottom: 2rem;
+    width: 15%;
+    height: auto;
+    object-fit: contain;
 }
