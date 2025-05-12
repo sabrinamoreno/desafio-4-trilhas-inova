@@ -2,50 +2,55 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/estilos/style.css">
-    <title>Landing Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/estilos/style.css">
+  <title>Landing Page</title>
 </head>
-<body>
-    <header>
-        <nav id="navbar">
-          <div class="container">
-            <div class="nav-left">
-              <a href="#inicio">Início</a>
-            </div>
-            <div class="nav-right">
-              <a href="#sobre">Sobre</a>
-              <a href="#">Suporte</a>
-            </div>
-          </div>
-        </nav>
-      </header>
-    <main>
-        <div class="acessar__dados">
-            <div>
-                <h1 id="inicio">"Acompanhe os indicadores de acesso e permanência de crianças e adolescentes na educação básica em todo o país."</h1>
-           <button class="btn__dados"> <a class="texto" href="/paginashtmls/dashboard.html">Acessar Dados</a></button>
-            </div>
-        </div>
 
-            <div class="descricao__sistema">
-              <div class="alinhar__texto__2">
-                <h2 id="sobre">Sobre o sistema</h2>
-                    <p class="alinhar__texto">Este sistema foi desenvolvido com o objetivo de facilitar o acesso a dados públicos sobre a educação
-                    básica no Brasil. Por meio de uma interface simples e interativa, é possível visualizar indicadores
-                    fundamentais relacionados ao acesso e à permanência de crianças e adolescentes na escola, como taxa de
-                    matrícula, percentual de evasão escolar, e distribuição por rede de ensino.</p>
-                  </div>
-                  <img class="posicionar__img" src="/img/estudantes.jpg" alt="Crianças Estudando">
-            </div>
+<body>
+  <header>
+    <nav id="navbar">
+      <div class="container">
+        <div>
+          <a class="nav-left" href="/paginashtmls/index.html"><img class="icone-casa" src="/img/casa.png"
+              alt="Ir para a página inicial"></a>
         </div>
-        </main>
-        <footer class="rodape">
-            <h3>Agradecimentos</h3>
-            <img class="img__rodape" src="/img/logo_maranhao_secti.png" alt="Logo do Governo do Maranhão">
-            <img class="img__rodape"src="/img/logo_trilhas.png" alt="Logo do Trilhas">
-        </footer>
-        <script src="/apps/script.js"></script>
+        <div class="nav-right">
+          <a href="#sobre">Sobre</a>
+          <a href="#">Suporte</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="acessar__dados">
+      <h1 id="inicio">"Acompanhe os indicadores de acesso e permanência de crianças e adolescentes na educação básica
+        em todo o país."</h1>
+      <a class="btn__dados" href="/paginashtmls/dashboard.html">Acessar Dados</a>
+    </div>
+
+    <div class="descricao__sistema">
+      <div class="alinhar__texto__2">
+        <h2 id="sobre">Sobre o sistema</h2>
+        <p class="alinhar__texto">Este sistema foi desenvolvido com o objetivo de facilitar o acesso a dados públicos
+          sobre a educação
+          básica no Brasil. Por meio de uma interface simples e interativa, é possível visualizar indicadores
+          fundamentais relacionados ao acesso e à permanência de crianças e adolescentes na escola, como taxa de
+          matrícula, percentual de evasão escolar, e distribuição por rede de ensino.</p>
+      </div>
+      <img class="posicionar__img" src="/img/estudantes.jpg" alt="Crianças Estudando">
+    </div>
+    </div>
+  </main>
+  <footer class="rodape">
+    <h3>Agradecimentos</h3>
+    <div class="rodape__logos">
+    <img class="rodape__logos__secti" src="/img/logo_maranhao_secti.png" alt="Logo do Governo do Maranhão">
+    <img class="rodape__logos__trilhas" src="/img/logo_trilhas.png" alt="Logo do Trilhas">
+    </div>
+  </footer>
+  <script src="/apps/script.js"></script>
 </body>
+
 </html>
