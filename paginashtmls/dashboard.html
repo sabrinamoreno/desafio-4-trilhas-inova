@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="/estilos/dashboard.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="/estilos/dashboard.css">
+    </head>
 
-<body>
-    <header>
+    <body>
+        <header>
         <nav id="navbar">
             <div class="container">
-                <div>
-                    <a class="nav-left" href="/paginashtmls/index.html"><img class="icone-casa"
-                            src="/img/casa_branca.png" alt="Ir para a página inicial"></a>
+                <div class="nav-left">
+                    <a href="/paginashtmls/index.html">
+                        <img class="icone-casa" src="/img/casa_branca.png" alt="Ir para a página inicial">
+                    </a>
                 </div>
                 <div class="nav-right">
                     <a href="#sobre">Sobre</a>
@@ -22,91 +23,97 @@
                 </div>
             </div>
         </nav>
+        </header>
+
         <main>
-            <form class="filtros" action="">
-                <div class="filtros__sessoes">
-                    <div class="filtros__sessoes__opcoes">
-                        <label for="regiao">Região</label>
-                        <select name="regiao" id="regiao">
-                            <option value="norte">Norte</option>
-                            <option value="norderte">Nordeste</option>
-                            <option value="centro-oeste">Centro Oeste</option>
-                            <option value="sul">Sul</option>
-                            <option value="suldeste">Sudeste</option>
-                        </select>
-                    </div>
-                    <div class="filtros__sessoes__opcoes">
-                        <label for="ano">Ano</label>
-                        <select name="ano" id="ano">
-                            <option value="2020">2020</option>
-                            <option value="2021">2021</option>
-                            <option value="2022">2022</option>
-                            <option value="2023">2023</option>
-                            <option value="2024">2024</option>
-                        </select>
-                    </div>
-                    <div class="filtros__sessoes__opcoes">
-                        <label for="segmento-educacional">Segmento Educacional</label>
-                        <select name="segmento-educacional" id="segmento-educacional">
-                            <option value="educacao-infantil">Educação Infantil</option>
-                            <option value="ensino-fundamental">Ensino Fundamental</option>
-                            <option value="ensino-medio">Ensino Médio</option>
-                            <option value="ensino-adulto">Ensino p/Adultos</option>
-                        </select>
-                    </div>
-                    <div class="filtros__sessoes__opcoes">
-                        <label for="rede-ensino">Rede de Ensino</label>
-                        <select name="rede-ensino" id="rede-ensino">
-                            <option value="publica">Pública</option>
-                            <option value="privada">Privada</option>
-                        </select>
+        <form class="filtros" action="">
+            <div class="filtros__sessoes">
+                <div class="filtros__sessoes__opcoes">
+                    <label for="regiao">Região</label>
+                    <select name="regiao" id="regiao">
+                        <option value="norte">Norte</option>
+                        <option value="nordeste">Nordeste</option>
+                        <option value="centro-oeste">Centro Oeste</option>
+                        <option value="sul">Sul</option>
+                        <option value="suldeste">Sudeste</option>
+                    </select>
+                </div>
+                <div class="filtros__sessoes__opcoes">
+                    <label for="ano">Ano</label>
+                    <select name="ano" id="ano">
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+                <div class="filtros__sessoes__opcoes">
+                    <label for="segmento-educacional">Segmento Educacional</label>
+                    <select name="segmento-educacional" id="segmento-educacional">
+                        <option value="educacao-infantil">Educação Infantil</option>
+                        <option value="ensino-fundamental">Ensino Fundamental</option>
+                        <option value="ensino-medio">Ensino Médio</option>
+                        <option value="ensino-adulto">Ensino p/Adultos</option>
+                    </select>
+                </div>
+                <div class="filtros__sessoes__opcoes">
+                    <label for="rede-ensino">Rede de Ensino</label>
+                    <select name="rede-ensino" id="rede-ensino">
+                        <option value="publica">Pública</option>
+                        <option value="privada">Privada</option>
+                    </select>
+                </div>
+            </div>
+
+            <section class="filtros__resultados">
+                <div class="filtros__sessoes__resultados cor-1">
+                    <img src="/img/matricular.png" alt="">
+                    <div>
+                        <h3>Título</h3>
+                        <p>Valor</p>
                     </div>
                 </div>
+                <div class="filtros__sessoes__resultados cor-2">
+                    <img src="/img/criancas.png" alt="Imagem da representação de duas crianças">
+                    <div>
+                        <h3>Título</h3>
+                        <p>Valor</p>
+                    </div>
+                </div>
+                <div class="filtros__sessoes__resultados cor-3">
+                    <img src="/img/escola.png" alt="Imagem da representação de uma escola">
+                    <div>
+                        <h3>Título</h3>
+                        <p>Valor</p>
+                    </div>
+                </div>
+                <div class="filtros__sessoes__resultados cor-4">
+                    <img src="/img/grafico-para-baixo.png" alt="Imagem de um gráfico decaindo">
+                     <div>
+                        <h3>Título</h3>
+                        <p>Valor</p>
+                    </div>
+                </div>
+            </section>
 
-                <section class="filtros__resultados">
-                    <div class="filtros__sessoes__resultados cor-1">
-                        <img src="/img/matricular.png" alt="">
-                        <div>
-                            <h3>Título</h3>
-                            <p>Valor</p>
-                        </div>
-                    </div>
-                    <div class="filtros__sessoes__resultados cor-2">
-                        <img src="/img/criancas.png" alt="">
-                        <div>
-                            <h3>Título</h3>
-                            <p>Valor</p>
-                        </div>
-                    </div>
-                    <div class="filtros__sessoes__resultados cor-3">
-                        <img src="/img/escola.png" alt="">
-                        <div>
-                            <h3>Título</h3>
-                            <p>Valor</p>
-                        </div>
-                    </div>
-                    <div class="filtros__sessoes__resultados cor-4">
-                        <img src="/img/grafico-para-baixo.png" alt="">
-                        <div>
-                            <h3>Título</h3>
-                            <p>Valor</p>
-                        </div>
-                    </div>
-                </section>
+            <section class="section__graficos">
+                <canvas class="section__graficos__cor"></canvas>
+                <canvas class="section__graficos__cor"></canvas>
+            </section>
 
-                <section class="section__graficos">
-                    <canvas class="section__graficos__cor"></canvas>
-                    <canvas class="section__graficos__cor"></canvas>
-                </section>
-
-            </form>
+        </form>
         </main>
+
         <footer class="rodape">
-            <h3>Agradecimentos</h3>
-            <div class="rodape__logos">
-                <img class="rodape__logos__secti" src="/img/logo_maranhao_secti.png" alt="Logo do Governo do Maranhão">
-                <img class="rodape__logos__trilhas" src="/img/logo_trilhas.png" alt="Logo do Trilhas">
-            </div>
+        <h3>Agradecimentos</h3>
+        <div class="rodape__logos">
+            <img class="rodape__logos__secti" src="/img/logo_maranhao_secti.png" alt="Logo do Governo do Maranhão">
+            <img class="rodape__logos__trilhas" src="/img/logo_trilhas.png" alt="Logo do Trilhas">
+        </div>
         </footer>
+
         <script src="/apps/script.js"></script>
-</body>
+    </body>
+
+</html>
