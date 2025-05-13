@@ -37,6 +37,7 @@ Este projeto está sendo desenvolvido no âmbito do programa **Trilhas Inova**, 
 |-------------------------------------------|-------------------------------------|
 | Ana Gabriella da Silva Sousa              | UX Design                          |
 | Glenda Maria Nascimento Lavra             | UX Design                          |
+| Raislan Italo de Sousa da Silva           | Front end                          |
 | Edlan Carvalho Silva                      | Front end                          |
 | Sabrina Moreno Rodrigues                  | Front end                          |
 
