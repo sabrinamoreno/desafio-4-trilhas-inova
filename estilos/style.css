@@ -129,7 +129,6 @@ a:hover {
   background-color: #cf8724;
 }
 
-
 /*************3° parte da página **************/
 
 .descricao__sistema {
@@ -151,42 +150,12 @@ a:hover {
 }
 
 .alinhar__texto__2 p {
-  font-size: 1.6vw;
-  line-height: 1.6;
+  font-size: 1.35vw;
+  line-height: 1.5;
+  text-align: justify;
+  text-indent: 2em;
+  margin: 1em 0;
 }
-
-
-/* .descricao__sistema h2,
-.descricao__sistema p {
-  width: 100%;
-  margin: 0;
-}
-
-.alinhar__texto {
-  line-height: 1.25;
-} */
-
-
-/* @media (min-width: 768px) {
-  .descricao__sistema {
-    flex-wrap: nowrap;
-  }
-
-  .descricao__sistema h2,
-  .descricao__sistema p {
-    width: 50%;
-  }
-
-  .descricao__sistema .alinhar__texto {
-    text-align: left;
-    margin-top: 10px;
-  }
-
-  .descricao__sistema .posicionar__img {
-    width: 400px;
-    height: auto;
-  }
-} */
 
 
 /*************4° parte da página( rodapé ) **************/
