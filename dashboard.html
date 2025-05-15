@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/estilos/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="/apps/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <div class="nav-left">
+                    <a href="index.html">
+                        <img class="icone-casa" src="/img/casa_branca.png" alt="Ir para a página inicial">
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <a href="#sobre">Sobre</a>
+                    <a href="#">Suporte</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Sistema de Monitoramento da Formação Continuada (SISFOR)</h1>
+
+        <form class="filtros" action="">
+            <div class="filtros__sessoes">
+                <div class="filtros__sessoes__opcoes">
+                    <label for="filtro-ano">Filtrar por Ano:</label>
+                    <select id="filtro-ano" onchange="atualizarDashboard()">
+                        <option value="">Todos</option>
+                    </select>
+                </div>
+                <div class="filtros__sessoes__opcoes">
+                    <label for="filtro-ies">Filtrar por IES:</label>
+                    <select id="filtro-ies" onchange="atualizarDashboard()">
+                        <option value="">Todas</option>
+                    </select>
+                </div>
+            </div>
+
+            <section class="filtros__resultados">
+                <div class="filtros__sessoes__resultados cor-1">
+                    <img src="/img/verificar.png" alt="">
+                    <div>
+                        <h3>Aprovados</h3>
+                        <p id="card-aprovados">0</p>
+                    </div>
+                </div>
+                <div class="filtros__sessoes__resultados cor-2">
+                    <img src="/img/reprovar.png" alt="Imagem da representação de duas crianças">
+                    <div>
+                        <h3>Reprovados</h3>
+                        <p id="card-reprovados">0</p>
+                    </div>
+                </div>
+                <div class="filtros__sessoes__resultados cor-3">
+                    <img src="/img/desaparecer.png" alt="Imagem da representação de uma escola">
+                    <div>
+                        <h3>Evadidos</h3>
+                        <p id="card-evadidos">0</p>
+                    </div>
+                </div>
+                <div class="filtros__sessoes__resultados cor-4">
+                    <img src="/img/objetivo.png" alt="Imagem de um gráfico decaindo">
+                    <div>
+                        <h3>Meta</h3>
+                        <p id="card-meta">0</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section__graficos">
+                <canvas id="grafico" class="section__graficos__cor"></canvas>
+            </section>
+
+            <table id="tabela-cursos">
+                <thead>
+                    <tr>
+                        <th>Curso</th>
+                        <th>Aprovados</th>
+                        <th>Reprovados</th>
+                        <th>Evadidos</th>
+                        <th>Falecidos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+        </form>
+    </main>
+
+    <footer class="rodape">
+        <h3>Agradecimentos</h3>
+        <div class="rodape__logos">
+            <img class="rodape__logos__secti" src="/img/logo_maranhao_secti.png" alt="Logo do Governo do Maranhão">
+            <img class="rodape__logos__trilhas" src="/img/logo_trilhas.png" alt="Logo do Trilhas">
+        </div>
+    </footer>
+
+    <script src="/apps/script.js"></script>
+</body>
+
+</html>
