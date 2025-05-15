@@ -32,13 +32,6 @@
   padding: 0%;
 }
 
-
-/*Obs: eu ainda to tentando posicionar com as mesmas medidas do layout do figma, se houver algum erro, fique a vontade para corrigir, ok? 
-No html eu tive que colocar algumas divs e classes pra facilitar na hora de estilizar, e tambem eu dividi o codigo CSS em 4 partes (ou seções), 
-pra ficar mais fácil de estilizar . Alem disso, coloquei comentarios pra dividir as secoes .  Ainda tem varios ajustes a fazer nas 4 partes da 
-landing page, e tbm alguns medias query pra deixar responsivo */
-
-
 /*************Essa é a parte do cabeçalho (1° parte) **************/
 
 html {
