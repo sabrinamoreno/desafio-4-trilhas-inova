@@ -122,6 +122,23 @@ a:hover {
   background-color: #cf8724;
 }
 
+@media(max-width:768px){
+  .acessar__dados{
+    padding: 15% 5%;
+     gap:1.5rem;  
+  }
+  
+  #inicio {
+    font-size: 7vw;
+  }
+
+  .btn__dados {
+    width: 80%;               
+    font-size: 4.5vw;          
+    padding: 1.2rem;    
+  }
+}
+
 /*************3°parte da página **************/
 
 .descricao__sistema {
