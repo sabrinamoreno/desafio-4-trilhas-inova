@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+:root {
+    --cor-primaria: #1E67ED;
+    --cor-secundaria: #EC9B29;
+    --cor-hover: #cf8724;
+    --cor-fundo: #fff;
+
+    --tamanho-titulo: clamp(1.2rem, 1.4rem, 2rem);
+    --tamanho-subtitulo: clamp(1rem, 1.2rem, 1.8rem);
+    --tamanho-texto: clamp(1rem, 1.2rem, 2rem);
+
+    --font-principal: 'Roboto', sans-serif;
+
+    --padding-base: 1.5rem;
+    --largura-maxima: 1500px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--font-principal);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo);
+}
+
+/* Cabeçalho */
+.container {
+    display: flex;
+    background-color: var(--cor-primaria);
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-base);
+    width: 100%;
+    max-width: var(--largura-maxima);
+}
+
+.icone-casa {
+    height: 30px;
+    width: auto;
+}
+
+/* Conteúdo principal */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-base);
+    text-align: center;
+}
+
+.paragrafo {
+    font-size: var(--tamanho-texto);
+    color: var(--cor-primaria);
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: var(--cor-primaria);
+    padding: var(--padding-base);
+    text-align: center;
+}
+
+.rodape h3 {
+    font-size: var(--tamanho-titulo);
+    color: var(--cor-fundo);
+    margin: 1rem;
+}
+
+.rodape__logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.rodape__logos__trilhas,
+.rodape__logos__secti {
+    width: 30%;
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .icone-casa {
+        height: 25px;
+    }
+
+    .rodape__logos__trilhas,
+    .rodape__logos__secti {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 2rem 1rem;
+    }
+
+    .paragrafo {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .rodape h3 {
+        font-size: 1rem;
+    }
+
+    .rodape__logos__trilhas,
+    .rodape__logos__secti {
+        width: 45%;
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .icone-casa {
+        height: 20px;
+    }
+
+    .paragrafo {
+        font-size: 0.95rem;
+    }
+
+    .rodape__logos__trilhas,
+    .rodape__logos__secti {
+        width: 80%;
+        max-width: 100px;
+    }
+}
