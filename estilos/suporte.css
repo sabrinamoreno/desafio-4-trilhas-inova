@@ -13,7 +13,7 @@
     --font-principal: 'Roboto', sans-serif;
 
     --padding-base: 1.5rem;
-    --largura-maxima: 1500px;
+    --largura-maxima: 100%;
 }
 
 /* Reset */
