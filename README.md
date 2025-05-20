@@ -46,4 +46,4 @@ Este projeto está sendo desenvolvido no âmbito do programa **Trilhas Inova**, 
 
 ## Status do projeto :
 
-Em desenvolvimento...
+![Nuxt](https://img.shields.io/badge/Em-Desenvolvimento...-002E3B?style=for-the-badge&logo=nuxtdotjs&logoColor=#00DC82)
