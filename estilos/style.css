@@ -103,23 +103,23 @@ a {
 }
 
 .btn__dados {
-  color: #ffff;
+  color: #000;
   margin-top: 1rem;
   width: 11.25rem;
   padding: 1rem;
-  background-color: #EC9B29;
+  background-color: #FFC107;
   border-radius: 0.5rem;
   font-weight: 600;
   font-size: 1.4vw;
 }
 
 .btn__dados:hover {
-  background-color: #cf8724;
-  transition: background-color 0.3s ease;
+  background-color: #EC9B29;
+  transition: background-color 0.2s ease;
 }
 
 a:hover {
-  background-color: #cf8724;
+  background-color: #EC9B29;
 }
 
 @media(max-width:768px){

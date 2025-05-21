@@ -7,9 +7,9 @@ export function atualizarDashboard(dados) {
   const ies = document.getElementById('filtro-ies').value;
 
   let filtrados = dados.filter(d => (!ano || d.ANO === ano) && (!ies || d.IES === ies));
-  atualizarGrafico(filtrados); //atualiza o grafico
+  atualizarGrafico(filtrados); // atualiza o gráfico
   atualizarTabela(filtrados); // atualiza a tabela
-  atualizarCards(filtrados); // atualiza s cards também
+  atualizarCards(filtrados);  // atualiza os cards também
 }
 
 // Função para atualizar os cards com os dados totais
@@ -18,13 +18,11 @@ function atualizarCards(dadosFiltrados) {
   const totalReprovados = dadosFiltrados.reduce((soma, item) => soma + (item.REPROVADOS || 0), 0);
   const totalEvadidos = dadosFiltrados.reduce((soma, item) => soma + (item.EVADIDOS || 0), 0);
 
-  // Tratamento para o valor da meta anual
   const totalMeta = dadosFiltrados.reduce((soma, item) => {
     const valorMeta = parseFloat(item.META);
     return soma + (isFinite(valorMeta) ? valorMeta : 0);
   }, 0);
 
-  // Função para exibir número em formato abreviado (K, M)
   function formatarNumeroAbreviado(valor) {
     if (valor >= 1_000_000) {
       return (valor / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
@@ -35,7 +33,6 @@ function atualizarCards(dadosFiltrados) {
     return valor.toString();
   }
 
-  // Atualiza os elementos no HTML
   document.getElementById("card-aprovados").textContent = totalAprovados;
   document.getElementById("card-reprovados").textContent = totalReprovados;
   document.getElementById("card-evadidos").textContent = totalEvadidos;
@@ -47,13 +44,21 @@ function atualizarGrafico(dados) {
   const ctx = document.getElementById('grafico').getContext('2d');
   if (graficoAtual) graficoAtual.destroy();
 
-  const cursos = dados.slice(0, 10); // Pega apenas os 10 primeiros cursos
+  const cursos = dados.slice(0, 10);
+  const nomesCompletos = cursos.map(d => d.CURSO);
+  const telaPequena = window.innerWidth < 600;
 
-  // Criação do gráfico através do Chart
+  const nomesParaEixo = cursos.map(d => {
+    if (telaPequena) {
+      return d.CURSO.split(' - ')[0];
+    }
+    return d.CURSO.length > 15 ? d.CURSO.slice(0, 15) + '...' : d.CURSO;
+  });
+
   graficoAtual = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: cursos.map(d => d.CURSO),
+      labels: nomesParaEixo,
       datasets: [
         {
           label: 'Aprovados',
@@ -84,8 +89,27 @@ function atualizarGrafico(dados) {
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       scales: {
-        y: { beginAtZero: true }
+        x: {
+          display: !telaPequena, // esconde eixo X se a tela for pequena
+        },
+        y: {
+          beginAtZero: true
+        }
+      },
+      plugins: {
+        tooltip: {
+          callbacks: {
+            title: function (context) {
+              const index = context[0].dataIndex;
+              return nomesCompletos[index]; // mostra nome completo no tooltip
+            }
+          }
+        },
+        legend: {
+          position: 'top'
+        }
       }
     }
   });
