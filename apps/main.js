@@ -27,3 +27,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.error('Erro ao buscar dados:', e);
   }
 });
+
+
+const btnMenu = document.getElementById('btn-menu');
+const navLinks = document.getElementById('nav-links');
+
+btnMenu.addEventListener('click', () => {
+  const aberto = navLinks.classList.toggle('aberto');
+  btnMenu.setAttribute('aria-expanded', aberto);
+});
+
+
+const btnMenu = document.getElementById('btn-menu');
+const navLinks = document.getElementById('nav-links');
+
+btnMenu.addEventListener('click', () => {
+  const aberto = navLinks.classList.toggle('aberto');
+  btnMenu.setAttribute('aria-expanded', aberto);
+});
