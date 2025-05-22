@@ -35,19 +35,132 @@ body {
 }
 
 /* Cabeçalho */
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-primaria);
+    height: 15vh;
+    width: 100%;
+}
+
 .container {
     display: flex;
-    background-color: var(--cor-primaria);
     justify-content: space-between;
     align-items: center;
-    padding: var(--padding-base);
+    padding: 0 var(--padding-base);
     width: 100%;
     max-width: var(--largura-maxima);
 }
 
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
 .icone-casa {
-    height: 30px;
+    max-height: 30px;
     width: auto;
+}
+
+.nav-right {
+    gap: 1.5rem;
+}
+
+.nav-right a {
+    font-size: var(--tamanho-btn);
+    padding: 0 1rem;
+    color: var(--cor-fundo);
+    transition: all 0.3s ease;
+}
+
+.nav-right a:hover {
+    color: var(--cor-hover);
+    transform: translateY(-2px);
+}
+
+/* Botão menu para telas pequenas - inicialmente escondido */
+#btn-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: var(--cor-fundo);
+    cursor: pointer;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+#btn-menu:hover,
+#btn-menu:focus {
+    color: var(--cor-hover);
+    outline: none;
+}
+
+/* Em telas pequenas */
+.menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Tamanhos maiores mantém menu normal */
+@media (max-width: 654px) {
+    .nav-right {
+        position: absolute;
+        top: 100%;
+        left: -78px;
+        background-color: var(--cor-primaria);
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        width: max-content;
+        min-width: 150px;
+        z-index: 1000;
+    }
+
+    .nav-right.aberto {
+        display: flex;
+    }
+
+    #btn-menu {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2.2rem;
+        color: var(--cor-fundo);
+        cursor: pointer;
+        padding: 0;
+        margin-left: 1rem;
+    }
+
+    .nav-right a {
+        padding: 0.8rem 1.5rem;
+        color: var(--cor-fundo);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-right a:first-child {
+        border-top: none;
+    }
+
+    .nav-right a:hover {
+        background-color: var(--cor-hover);
+        color: var(--cor-fundo);
+        transform: none;
+    }
 }
 
 /* Conteúdo principal */
@@ -99,11 +212,6 @@ main {
 /* RESPONSIVIDADE */
 
 @media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     .icone-casa {
         height: 25px;
     }

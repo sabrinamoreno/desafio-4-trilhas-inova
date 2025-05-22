@@ -5,16 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suporte</title>
     <link rel="stylesheet" href="estilos/suporte.css">
+    <script type="module" src="/apps/main.js" defer></script>
 </head>
 
 <body>
 
     <header>
-        <div class="container">
-            <a href="index.html">
-                <img class="icone-casa" src="/img/casa_branca.png" alt="Ir para a página inicial">
-            </a>
-        </div>
+         <nav id="navbar">
+            <div class="container">
+                <div class="nav-left">
+                    <a href="index.html">
+                        <img class="icone-casa" src="/img/casa_branca.png" alt="Ir para a página inicial">
+                    </a>
+                </div>
+
+                <div class="menu-container">
+                    <button id="btn-menu" aria-expanded="false" aria-controls="nav-links"
+                        aria-label="Abrir menu">&#9776;</button>
+                    <div class="nav-right" id="nav-links">
+                        <a href="index.html#sobre">Sobre</a>
+                        <a href="dashboard.html">Dashboard</a>
+                        <a href="suporte.html"><strong>Suporte</strong></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
