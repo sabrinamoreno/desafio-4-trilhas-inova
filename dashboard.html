@@ -19,13 +19,20 @@
                         <img class="icone-casa" src="/img/casa_branca.png" alt="Ir para a página inicial">
                     </a>
                 </div>
-                <div class="nav-right">
-                    <a href="index.html#sobre">Sobre</a>
-                    <a href="suporte.html">Suporte</a>
+
+                <div class="menu-container">
+                    <button id="btn-menu" aria-expanded="false" aria-controls="nav-links"
+                        aria-label="Abrir menu">&#9776;</button>
+                    <div class="nav-right" id="nav-links">
+                        <a href="index.html#sobre">Sobre</a>
+                        <a href="dashboard.html"><strong>Dashboard</strong></a>
+                        <a href="suporte.html">Suporte</a>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
+
 
     <main>
         <h1>Sistema de Monitoramento da Formação Continuada (SISFOR)</h1>
@@ -94,6 +101,10 @@
                 <tbody>
                 </tbody>
             </table>
+
+            <!-- CARDS (visíveis apenas em telas pequenas) -->
+            <div id="cards-mobile" class="cards-mobile">
+            </div>
 
         </form>
     </main>

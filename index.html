@@ -6,22 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/estilos/style.css">
   <title>Landing Page</title>
+  <script type="module" src="/apps/main.js" defer></script>
 </head>
 
 <body>
   <header>
     <nav id="navbar">
-      <div class="container">
-        <div>
-          <a class="nav-left" href="/paginashtmls/index.html"><img class="icone-casa" src="/img/casa.png"
-              alt="Ir para a página inicial"></a>
-        </div>
-        <div class="nav-right">
-          <a href="#sobre">Sobre</a>
-          <a href="suporte.html">Suporte</a>
-        </div>
-      </div>
-    </nav>
+            <div class="container">
+                <div class="nav-left">
+                    <a href="index.html">
+                        <img class="icone-casa" src="/img/casa.png" alt="Ir para a página inicial">
+                    </a>
+                </div>
+
+                <div class="menu-container">
+                    <button id="btn-menu" aria-expanded="false" aria-controls="nav-links"
+                        aria-label="Abrir menu">&#9776;</button>
+                    <div class="nav-right" id="nav-links">
+                        <a href="index.html#sobre">Sobre</a>
+                        <a href="dashboard.html">Dashboard</a>
+                        <a href="suporte.html">Suporte</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
   </header>
   <main>
     <div class="acessar__dados">

@@ -82,6 +82,79 @@ a {
   padding: 0 20px;
 }
 
+/* Botão menu para telas pequenas - inicialmente escondido */
+#btn-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: var(--cor-texto);
+  cursor: pointer;
+  padding: 0;
+  margin-left: 1rem;
+}
+
+#btn-menu:hover,
+#btn-menu:focus {
+  color: var(--cor-primaria);
+  outline: none;
+}
+
+/* Em telas pequenas */
+.menu-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Tamanhos maiores mantém menu normal */
+@media (max-width: 654px) {
+  .nav-right {
+    position: absolute;
+    top: 100%;
+    left: -77px;
+    background-color: var(--cor-primaria);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    width: max-content;
+    min-width: 150px;
+    z-index: 1000;
+  }
+
+  .nav-right.aberto {
+    display: flex;
+  }
+
+  #btn-menu {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: var(--cor-primaria);
+    cursor: pointer;
+    padding: 0;
+    margin-left: 1rem;
+  }
+
+  .nav-right a {
+    padding: 0.8rem 1.5rem;
+    color: var(--cor-fundo);
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .nav-right a:first-child {
+    border-top: none;
+  }
+
+  .nav-right a:hover {
+    background-color: var(--cor-hover);
+    color: var(--cor-fundo);
+    transform: none;
+  }
+}
+
 
 /*************2° parte da página **************/
 
@@ -122,20 +195,20 @@ a:hover {
   background-color: #EC9B29;
 }
 
-@media(max-width:768px){
-  .acessar__dados{
+@media(max-width:768px) {
+  .acessar__dados {
     padding: 15% 5%;
-     gap:1.5rem;  
+    gap: 1.5rem;
   }
-  
+
   #inicio {
     font-size: 7vw;
   }
 
   .btn__dados {
-    width: 80%;               
-    font-size: 4.5vw;          
-    padding: 1.2rem;    
+    width: 80%;
+    font-size: 4.5vw;
+    padding: 1.2rem;
   }
 }
 
@@ -168,32 +241,32 @@ a:hover {
 }
 
 
-@media(max-width:768px){
-    .alinhar__texto__2 h2{
-      font-size: 6vw;
-      margin-bottom: 4vw;
-      text-align: justify;
+@media(max-width:768px) {
+  .alinhar__texto__2 h2 {
+    font-size: 6vw;
+    margin-bottom: 4vw;
+    text-align: justify;
 
-    }
+  }
 
-    .alinhar__texto__2 p{
-      font-size: 4.0vw;
-      text-align: justify;
-      text-indent: 1em;
-      margin: 1em 0;
-    }
+  .alinhar__texto__2 p {
+    font-size: 4.0vw;
+    text-align: justify;
+    text-indent: 1em;
+    margin: 1em 0;
+  }
 
-    .descricao__sistema img{
-      max-width: 80%;
-      margin: 0 auto;
-    }
+  .descricao__sistema img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 
-    .descricao__sistema{
-      grid-template-columns: 1fr;
-      margin: 2rem 1rem; 
-      gap: 2rem;
-      text-align: center;  
-    }
+  .descricao__sistema {
+    grid-template-columns: 1fr;
+    margin: 2rem 1rem;
+    gap: 2rem;
+    text-align: center;
+  }
 }
 
 /*************4° parte da página( rodapé ) **************/
@@ -206,7 +279,7 @@ a:hover {
 
 .rodape h3 {
   margin: 1rem 1rem 2.5rem 1rem;
-  font-size: 1.6vw;
+  font-size: 2vw;
   color: #fff;
 }
 
@@ -219,7 +292,29 @@ a:hover {
 .rodape__logos__trilhas,
 .rodape__logos__secti {
   margin-bottom: 2rem;
-  width: 15%;
+  width: 20%;
   height: auto;
   object-fit: contain;
+}
+
+@media(max-width:768px) {
+  .rodape h3 {
+    font-size: 3vw;
+  }
+
+  .rodape__logos__trilhas,
+  .rodape__logos__secti {
+    width: 30%;
+  }
+}
+
+@media(max-width:350px) {
+  .rodape h3 {
+    font-size: 5vw;
+  }
+
+  .rodape__logos__trilhas,
+  .rodape__logos__secti {
+    width: 40%;
+  }
 }

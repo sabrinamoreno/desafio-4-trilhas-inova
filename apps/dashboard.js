@@ -46,7 +46,7 @@ function atualizarGrafico(dados) {
 
   const cursos = dados.slice(0, 10);
   const nomesCompletos = cursos.map(d => d.CURSO);
-  const telaPequena = window.innerWidth < 600;
+  const telaPequena = window.innerWidth < 600; // Variável que vai verificar o tamanho da tela
 
   const nomesParaEixo = cursos.map(d => {
     if (telaPequena) {
@@ -87,7 +87,7 @@ function atualizarGrafico(dados) {
         }
       ]
     },
-    options: {
+    options: { // Altera o estilo do gráfico para telas menores
       responsive: true,
       maintainAspectRatio: false,
       scales: {
@@ -118,7 +118,9 @@ function atualizarGrafico(dados) {
 // Função que atualiza a tabela com os dados
 function atualizarTabela(dados) {
   const tbody = document.querySelector('#tabela-cursos tbody');
+  const cardsContainer = document.getElementById('cards-mobile');
   tbody.innerHTML = '';
+  cardsContainer.innerHTML = ''; // limpa os cards antigos
 
   if (!dados.length) {
     tbody.innerHTML = `<tr><td colspan="5">Nenhum dado encontrado</td></tr>`;
@@ -126,6 +128,7 @@ function atualizarTabela(dados) {
   }
 
   dados.forEach(d => {
+    // Monta a linha da tabela
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td>${d.CURSO}</td>
@@ -135,5 +138,17 @@ function atualizarTabela(dados) {
       <td>${d.FALECIDOS ?? '-'}</td>
     `;
     tbody.appendChild(tr);
+
+    // Monta o card correspondente
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.innerHTML = `
+      <p><span>Curso:</span> ${d.CURSO}</p>
+      <p><span>Aprovados:</span> ${d.APROVADOS}</p>
+      <p><span>Reprovados:</span> ${d.REPROVADOS}</p>
+      <p><span>Evadidos:</span> ${d.EVADIDOS}</p>
+      <p><span>Falecidos:</span> ${d.FALECIDOS ?? '-'}</p>
+    `;
+    cardsContainer.appendChild(card);
   });
 }

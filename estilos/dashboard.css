@@ -89,6 +89,80 @@ a {
     transform: translateY(-2px);
 }
 
+/* Botão menu para telas pequenas - inicialmente escondido */
+#btn-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: var(--cor-fundo);
+    cursor: pointer;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+#btn-menu:hover,
+#btn-menu:focus {
+    color: var(--cor-hover);
+    outline: none;
+}
+
+/* Em telas pequenas */
+.menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Tamanhos maiores mantém menu normal */
+@media (max-width: 654px) {
+    .nav-right {
+        position: absolute;
+        top: 100%;
+        left: -77px;
+        background-color: var(--cor-primaria);
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        width: max-content;
+        min-width: 150px;
+        z-index: 1000;
+    }
+
+    .nav-right.aberto {
+        display: flex;
+    }
+
+    #btn-menu {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2.2rem;
+        color: var(--cor-fundo);
+        cursor: pointer;
+        padding: 0;
+        margin-left: 1rem;
+    }
+
+    .nav-right a {
+        padding: 0.8rem 1.5rem;
+        color: var(--cor-fundo);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-right a:first-child {
+        border-top: none;
+    }
+
+    .nav-right a:hover {
+        background-color: var(--cor-hover);
+        color: var(--cor-fundo);
+        transform: none;
+    }
+}
+
+
 /* Título */
 h1 {
     padding: var(--padding-base);
@@ -235,9 +309,9 @@ h1 {
 }
 
 @media (max-width: 600px) {
-  #grafico {
-    height: 200px !important;
-  }
+    #grafico {
+        height: 200px !important;
+    }
 }
 
 /* Tabela */
@@ -271,6 +345,50 @@ h1 {
     margin-right: 1rem;
 }
 
+/* Tabela alterada para card em telas menores */
+#cards-mobile {
+    flex-direction: column;
+    gap: 16px;
+    display: none;
+}
+
+@media (max-width: 654px) {
+    #tabela-cursos {
+        display: none;
+    }
+
+    #cards-mobile {
+        display: flex;
+    }
+}
+
+@media (min-width: 655px) {
+    #tabela-cursos {
+        display: table;
+    }
+
+    #cards-mobile {
+        display: none;
+    }
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.card span {
+    font-weight: bold;
+}
+
 
 /* Rodapé */
 .rodape {
@@ -301,6 +419,28 @@ h1 {
     height: auto;
     object-fit: contain;
     margin-bottom: 1.5rem;
+}
+
+@media(max-width:768px) {
+    .rodape h3 {
+        font-size: 3vw;
+    }
+
+    .rodape__logos__trilhas,
+    .rodape__logos__secti {
+        width: 30%;
+    }
+}
+
+@media(max-width:350px) {
+    .rodape h3 {
+        font-size: 5vw;
+    }
+
+    .rodape__logos__trilhas,
+    .rodape__logos__secti {
+        width: 40%;
+    }
 }
 
 /*nResponsividade */
