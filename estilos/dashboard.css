@@ -43,6 +43,16 @@ a {
     color: var(--cor-fundo);
 }
 
+/* Mensagem de erro */
+#mensagem-erro {
+    display: none; 
+    color: red; 
+    text-align: center; 
+    margin: 1rem 3rem;
+    font-weight: 600;
+    font-size: large;
+}
+
 /* Cabeçalho */
 #navbar {
     display: flex;

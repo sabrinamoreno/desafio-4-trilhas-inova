@@ -37,17 +37,19 @@
     <main>
         <h1>Sistema de Monitoramento da Formação Continuada (SISFOR)</h1>
 
+        <div id="mensagem-erro"></div>
+
         <form class="filtros" action="">
             <div class="filtros__sessoes">
                 <div class="filtros__sessoes__opcoes">
                     <label for="filtro-ano">Filtrar por Ano:</label>
-                    <select id="filtro-ano" onchange="atualizarDashboard()">
+                    <select id="filtro-ano">
                         <option value="">Todos</option>
                     </select>
                 </div>
                 <div class="filtros__sessoes__opcoes">
                     <label for="filtro-ies">Filtrar por IES:</label>
-                    <select id="filtro-ies" onchange="atualizarDashboard()">
+                    <select id="filtro-ies">
                         <option value="">Todas</option>
                     </select>
                 </div>
